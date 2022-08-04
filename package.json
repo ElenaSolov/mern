@@ -5,13 +5,16 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "server": "nodemon app.js"
+    "server": "nodemon app.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "keywords": [
     "react",
     "mongo",
     "express",
-    "JavaScript"
+    "JavaScript",
+    "node"
   ],
   "author": "Elena Soloveva <seaver@yandex.ru>",
   "license": "ISC",

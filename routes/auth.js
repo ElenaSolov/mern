@@ -3,7 +3,7 @@ const dotenv = require("dotenv");
 const User = require("../models/User");
 const bcrypt = require("bcryptjs");
 const { body, validationResult } = require("express-validator");
-var jwt = require("jsonwebtoken");
+const jwt = require("jsonwebtoken");
 
 const router = Router();
 
@@ -62,9 +62,9 @@ router.post(
           res.status(400).json({ message: "Wrong password" });
         }
         const token = jwt.sign({ userId: user.id }, process.env.JWT_SECRET, {
-          expiresIn,
-        :"20m"});
-        res.status(200).json({token, userId: user.id });
+          expiresIn: "20m",
+        });
+        res.status(200).json({ token, userId: user.id });
       }
     } catch (e) {
       res.status(500).json.message("Server error");
