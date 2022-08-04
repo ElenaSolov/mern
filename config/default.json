@@ -1,0 +1,4 @@
+{
+  "port": 3000,
+  "mongoURI": "mongodb+srv://seaver:Cnhfec11@cluster0.q0ehl.mongodb.net/?retryWrites=true&w=majority"
+}
